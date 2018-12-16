@@ -1,3 +1,3 @@
-class Applicant < ActiveRecord::Base
+class Applicant < ApplicationRecord
   validates :email, email: true, uniqueness: true
 end

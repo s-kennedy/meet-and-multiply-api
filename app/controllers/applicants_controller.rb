@@ -1,5 +1,5 @@
 class ApplicantsController < ApplicationController
-  # http_basic_authenticate_with :name => ENV["admin_name"], :password => ENV["admin_password"], :only => [:index, :show]
+  before_action :restrict_access
 
   def index
     @applicants = Applicant.order(:created_at)
