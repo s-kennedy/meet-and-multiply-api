@@ -16,7 +16,7 @@ class ApplicantsController < ApplicationController
     status = params[:status]
 
     if status == nil
-      render json: { message: "Please provide a status in order to update this application." }
+      render json: { message: "Please provide a status in order to update this application." }, status: :unprocessable_entity
     end
 
     @applicant.update(status: status)
@@ -31,12 +31,12 @@ class ApplicantsController < ApplicationController
     when "Rejected"
       ApplicantMailer.rejection_email(@applicant).deliver_now
       message = "#{@applicant.firstname} has been sent a rejection email."
-    when "Remind"
+    when "Reminder sent"
       ApplicantMailer.reminder(@applicant).deliver_now
       message = "#{@applicant.firstname} has been sent a reminder email."
     end
 
-    render json: { message: message }
+    render json: { message: message, applicant: @applicant }, status: :ok
   end
 
   def create
