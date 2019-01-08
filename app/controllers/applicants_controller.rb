@@ -59,7 +59,33 @@ class ApplicantsController < ApplicationController
   private
 
   def applicant_params
-    params.require(:applicant).permit(:firstname, :lastname, :email, :nationality, :location, :orgtype, :company, :website, :aboutcompany, :position, :businessexperience, :sectorexperience, :language, :bmodel, :interest, :profile, :additional, :referrer)
+    params.require(:applicant).permit(
+      :firstname,
+      :lastname,
+      :email,
+      :nationality,
+      :location,
+      :orgtype,
+      :company,
+      :position,
+      :website,
+      :aboutcompany,
+      :position,
+      :businessexperience,
+      :sectorexperience,
+      :language,
+      :bmodel,
+      :interest,
+      :profile,
+      :additional,
+      :referrer,
+      :role,
+      :financing,
+      :partner_bmodel,
+      :support_region,
+      :partner_sector,
+      :support_type,
+      :additonal_support)
   end
 
 end
