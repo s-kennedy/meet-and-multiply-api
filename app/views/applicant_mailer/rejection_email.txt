@@ -1,8 +1,8 @@
-Dear <%= @applicant.firstname %>, 
+Dear <%= @applicant.firstname %>,
 
-Thank you for applying to Meet & Multiply. 
+Thank you for applying to Meet & Multiply.
 
-Despite your experience in social business, unfortunately your profile doesn’t quite fit what <%= @applicant.bmodel %> is looking for in potential partners. If you’re interested, we will be publishing updates and outcomes from the event on Twitter with the hashtag #meetandmultiply. 
+Unfortunately, your profile doesn’t quite fit what <%= @originator %> is looking for in potential partners. If you’re interested, we will be publishing updates and outcomes from the event on XXX.
 
 Best wishes,
 
