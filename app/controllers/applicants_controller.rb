@@ -43,7 +43,7 @@ class ApplicantsController < ApplicationController
     @applicant = Applicant.new(applicant_params)
 
     if @applicant.save
-      # ApplicantMailer.confirm_email(@applicant).deliver_now
+      ApplicantMailer.confirm_email(@applicant).deliver_now
       render json: @applicant, status: :created
     else
       render json: @applicant.errors, status: :unprocessable_entity
