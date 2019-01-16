@@ -89,8 +89,9 @@ Rails.application.configure do
    :port                 => 587,
    :user_name            => ENV['endeva_username'],
    :password             => ENV['endeva_password'],
-   :authentication       => "plain",
+   :authentication       => :login,
    :enable_starttls_auto => true
   }
+
   config.action_mailer.default_url_options = { :host => 'www.meetandmultiply.org' }
 end
