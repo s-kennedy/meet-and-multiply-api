@@ -85,10 +85,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-   :address              => "mail.endeva.org",
+   :address              => "smtp.office365.com",
    :port                 => 587,
    :user_name            => ENV['endeva_username'],
    :password             => ENV['endeva_password'],
+   :domain               => "endeva.org"
    :authentication       => :login,
    :enable_starttls_auto => true
   }
