@@ -1,5 +1,5 @@
 class ApplicantMailer < ApplicationMailer
-  default from: 'meetandmultiply@endeva.org'
+  default from: ENV['endeva_username']
   include Rails.application.routes.url_helpers
   include ActionView::Helpers::UrlHelper
 

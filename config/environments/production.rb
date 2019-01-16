@@ -86,7 +86,7 @@ Rails.application.configure do
 #email.secureserver.net
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-   :address              => "email.endeva.org",
+   :address              => "smtp.office365.com",
    :port                 => 587,
    :user_name            => ENV['endeva_username'],
    :password             => ENV['endeva_password'],
