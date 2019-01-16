@@ -4,7 +4,7 @@ class ApplicantMailer < ApplicationMailer
   include ActionView::Helpers::UrlHelper
 
   ORIGINATOR_URL_LOOKUP = {
-    "Blooom" => "https://www.meetandmultiply.org/ekutir-blooom",
+    "Ekutir" => "https://www.meetandmultiply.org/ekutir-blooom",
     "LifeBank" => "https://www.meetandmultiply.org/lifebank",
     "ONergy" => "https://www.meetandmultiply.org/onergy",
     "Ignitia" => "https://www.meetandmultiply.org/ignitia",
@@ -34,6 +34,7 @@ class ApplicantMailer < ApplicationMailer
 
   def rejection_email(applicant)
     @applicant = applicant
+    @originator = @applicant.bmodel
     mail(to: @applicant.email, subject: "[Meet & Multiply] Your application results")
   end
 
