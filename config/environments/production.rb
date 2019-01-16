@@ -83,13 +83,14 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+#email.secureserver.net
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-   :address              => "smtp.office365.com",
+   :address              => "email.endeva.org",
    :port                 => 587,
    :user_name            => ENV['endeva_username'],
    :password             => ENV['endeva_password'],
-   :domain               => "endeva.org",
+   :domain               => "endeva.org"
    :authentication       => :login,
    :enable_starttls_auto => true
   }

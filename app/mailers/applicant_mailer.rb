@@ -1,10 +1,10 @@
 class ApplicantMailer < ApplicationMailer
-  default from: 's.kennedy@endeva.org'
+  default from: 'meetandmultiply@endeva.org'
   include Rails.application.routes.url_helpers
   include ActionView::Helpers::UrlHelper
 
   ORIGINATOR_URL_LOOKUP = {
-    "Blooom" => "https://www.meetandmultiply.org/blooom",
+    "Blooom" => "https://www.meetandmultiply.org/ekutir-blooom",
     "LifeBank" => "https://www.meetandmultiply.org/lifebank",
     "ONergy" => "https://www.meetandmultiply.org/onergy",
     "Ignitia" => "https://www.meetandmultiply.org/ignitia",
