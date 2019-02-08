@@ -63,6 +63,8 @@ class ApplicantsController < ApplicationController
       :firstname,
       :lastname,
       :email,
+      :phone,
+      :whatsapp,
       :nationality,
       :location,
       :orgtype,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_08_153638) do
+ActiveRecord::Schema.define(version: 2019_02_08_151142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2019_01_08_153638) do
     t.string "partner_sector"
     t.string "support_type"
     t.text "additonal_support"
+    t.string "phone"
+    t.boolean "whatsapp"
   end
 
   create_table "subscribers", force: :cascade do |t|
